@@ -59,19 +59,11 @@ RUN chmod +x /etc/service/caddy/run && chmod +x /etc/service/phpfpm/run && chmod
 
 ENV APP_ENV=local \
     APP_DEBUG=true \
-    DB_HOST=db \
-    DB_DATABASE=laravel \
-    DB_USERNAME=laravel \
-    DB_PASSWORD=laravelpass \
-    APP_URL="http://laravel.dev" \
-    APP_KEY="kD7qEXQBJUmURfVHvsHyWTVG9UmkZoUR" \
     DB_TYPE=pgsql \
     DB_PORT=5432 \
-    QUEUE_DRIVER=beanstalkd \
-    QUEUE_HOST=queue \
-    CACHE_DRIVER=redis \
-    REDIS_HOST=redis \
-    SESSION_DRIVER=redis \
+    QUEUE_DRIVER=sync \
+    CACHE_DRIVER=file \
+    SESSION_DRIVER=file \
     APP_FILESYSTEM=local  \
     MAIL_PRETEND=true
 
